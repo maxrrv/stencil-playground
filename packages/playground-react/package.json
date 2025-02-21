@@ -1,0 +1,30 @@
+{
+  "name": "playground-react",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Max Voelker <maximilian.voelker@sartorius.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "node ./__tests__/playground-react.test.js",
+    "build": "npm run tsc",
+    "tsc": "tsc -p . --outDir ./dist"
+  },
+  "dependencies": {
+    "@stencil/react-output-target": "^0.7.0",
+    "playground-core": "*"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
