@@ -4,6 +4,7 @@ import { Component, Prop, h, AttachInternals } from '@stencil/core';
   tag: 'my-component',
   styleUrl: 'my-component.css',
   shadow: true,
+  formAssociated: true,
 })
 export class MyComponent {
   @AttachInternals() internals: ElementInternals;
@@ -24,6 +25,7 @@ export class MyComponent {
 
   private setFormValue = () => {
     console.log('react-output-target-0.7.0');
+    console.log('internals', this.internals);
     console.log(this.value);
     this.internals?.setFormValue(this.value);
   };
